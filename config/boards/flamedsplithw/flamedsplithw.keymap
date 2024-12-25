@@ -1,0 +1,36 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+// ---------------------------------------------------------------------------------------------------------------------------------
+// |  ESC  |  Q  |  W  |  E   |  R   |  T   |  Y   |  U    |  I    |  O   |   P   | BSPC |
+// | SHIFT |  A  |  S  |  D   |  F   |  G   |  H   |  J    |  K    |  L   |   ;   |  RET |
+// | CTRL  |  Z  |  X  |  C   |  V   |  B   |  N   |  M    |  ,    |  .   |   /   | DEL  |
+//                     | mo 1 | TAB  | SPACE|  GUI |  ALT  |   \   |
+            bindings = <
+    &kp ESC   &kp Q &kp W &kp E &kp R &kp T     &kp Y &kp U &kp I           &kp O &kp P &kp BSPC
+    &kp LSHFT &kp A &kp S &kp D &kp F &kp G     &kp H &kp J &kp K         &kp L &kp SEMI &kp RET
+    &kp LCTRL &kp Z &kp X &kp C &kp V &kp B     &kp N &kp M &kp COMMA &kp DOT &kp SLSH &kp RCTRL
+                 &kp mo 1 &kp TAB &kp SPACE     &kp RGUI &kp RALT &kp FSLH
+            >;
+        };
+        function_layer {
+// ---------------------------------------------------------------------------------------------------------------------------------
+// |       |      |BT_CLR|BTSEL0|BTSEL1|BTSEL2|                                         |      |      |      |      |      |      |
+// |       |      |      |BTSEL3|BTSEL4|      |                                         |      |      |      |      |      |      |
+// |       |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
+//                       |      |      |      |      |      |      |      |      |      |      |      |      |
+            bindings = <
+    &trans &trans &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2              &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans     &bt BT_SEL 3 &bt BT_SEL 4 &trans                    &trans &trans &trans &trans &trans &trans
+    &trans &trans &trans &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans &trans &trans &trans
+                         &trans &trans &trans &trans &trans        &trans &trans &trans &trans &trans
+            >;
+        };
+    };
+};
