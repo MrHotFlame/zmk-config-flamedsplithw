@@ -1,0 +1,8 @@
+file_format: "1"
+id: flamedsplithw
+name: FLAMEDSPLITHW
+type: shield
+url: ""
+requires: [nice_nano_v2]
+features:
+  - keys
