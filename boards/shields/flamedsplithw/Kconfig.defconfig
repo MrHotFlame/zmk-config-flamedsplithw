@@ -3,4 +3,7 @@ if SHIELD_FLAMEDSPLITHW
 config ZMK_KEYBOARD_NAME
     default "flamedsplithw"
 
+config BT_DEVICE_NAME
+    default flamedsplithw
+    
 endif
